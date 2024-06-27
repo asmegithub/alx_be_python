@@ -2,7 +2,7 @@ def calculator():
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
 
-    operation = input("Select an operation (+, -, *, /): ")
+    operation = input("Choose the operation (+, -, *, /): ")
 
     result = match_case(operation, num1, num2)
     print("The result is:", result)
