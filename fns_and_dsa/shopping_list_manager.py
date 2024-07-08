@@ -26,18 +26,18 @@ def display_menu():
 def main():
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
+        choice = int(input("Enter your choice: "))
 
-        if choice == "1":
+        if choice == 1:
             add(input("Enter item: "))
             pass
-        elif choice == "2":
+        elif choice == 2:
             remove(input("Enter item: "))
             pass
-        elif choice == "3":
+        elif choice == 3:
             view()
             pass
-        elif choice == "4":
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
