@@ -29,10 +29,10 @@ def main():
         choice = int(input("Enter your choice: "))
 
         if choice == 1:
-            add(input("Enter item: "))
+            add(input("Enter the item to add: "))
             pass
         elif choice == 2:
-            remove(input("Enter item: "))
+            remove(input("Enter the item to remove: "))
             pass
         elif choice == 3:
             view()
