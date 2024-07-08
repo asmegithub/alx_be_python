@@ -1,32 +1,46 @@
-import random
+shopping_list = []
 
 
-tsedi = {
-    "title": "The names of Christ",
-    "author": "Dn Azmeraw",
-    "genre": "Religious",
-}
-selam = {
-    "title": "The names of Christ",
-    "author": "Dn Azmeraw",
-    "genre": "Religious",
-}
-fikir = {
-    "title": "Digua in The holy Bible",
-    "author": "M/Haddis Alemayehu",
-    "genre": "Religious",
-}
+def add(item):
+    global shopping_list
+    shopping_list.append(item)
 
-my_fav_books = {
-    "tsedi": tsedi,
-    "selam": selam,
-    "fikir": fikir,
-}
 
-# print(my_fav_books.get("tsedi", "Book not found"))
-random.randint(1, 10)
-random_numbers = {}
-for i in range(10):
-    random_numbers[i] = random.randint(1, 10)
+def remove(item):
+    global shopping_list
+    if item in shopping_list:
+        shopping_list.remove(item)
+    else:
+        print("Item not found")
 
-print(list(random_numbers.values()))
+
+def view():
+    print(shopping_list)
+
+
+def display_menu():
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
+    print("4. Exit")
+
+
+while True:
+    display_menu()
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add(input("Enter an item: "))
+        pass
+    elif choice == "2":
+        remove(input("Enter an item: "))
+        pass
+    elif choice == "3":
+        view()
+        pass
+    elif choice == "4":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please try again.")
