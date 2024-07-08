@@ -26,21 +26,26 @@ def display_menu():
     print("4. Exit")
 
 
-while True:
-    display_menu()
-    choice = input("Enter your choice: ")
+def main():
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
 
-    if choice == "1":
-        add(input("Enter an item: "))
-        pass
-    elif choice == "2":
-        remove(input("Enter an item: "))
-        pass
-    elif choice == "3":
-        view()
-        pass
-    elif choice == "4":
-        print("Goodbye!")
-        break
-    else:
-        print("Invalid choice. Please try again.")
+        if choice == "1":
+            add(input("Enter item: "))
+            pass
+        elif choice == "2":
+            remove(input("Enter item: "))
+            pass
+        elif choice == "3":
+            view()
+            pass
+        elif choice == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+
+if __name__ == "__main__":
+    main()
