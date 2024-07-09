@@ -1,5 +1,5 @@
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9.0 / 5.0
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
+# CELSIUS_TO_FAHRENHEIT_FACTOR = 9.0 / 5.0
+# FAHRENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
 
 
 # def convert_to_celsius(fahrenheit):
@@ -30,6 +30,10 @@ FAHRENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
 #         )
 #     case _:
 #         print("Invalid choice. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9.0 / 5.0
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
+
+
 def validate_input(temp):
     try:
         return float(temp)
@@ -38,12 +42,10 @@ def validate_input(temp):
 
 
 def convert_to_celsius(fahrenheit):
-    global FAHRENHEIT_TO_CELSIUS_FACTOR
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 
 def convert_to_fahrenheit(celsius):
-    global CELSIUS_TO_FAHRENHEIT_FACTOR
     return celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
 
 
