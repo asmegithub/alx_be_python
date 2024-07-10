@@ -4,6 +4,9 @@ CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 CELSIUS_TO_FAHRENHEIT_OFFSET = 32
 FAHRENHEIT_TO_CELSIUS_OFFSET = -32
 
+# Add missing line
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+
 # Function to convert Fahrenheit to Celsius
 
 
