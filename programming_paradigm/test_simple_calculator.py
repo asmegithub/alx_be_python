@@ -4,7 +4,7 @@ from simple_calculator import SimpleCalculator
 
 
 class SimpleCalculatorTest(unittest.TestCase):
-    def test_add(self):
+    def test_addition(self):
         self.calc = SimpleCalculator()
         self.assertEqual(self.calc.add(1, 2), 3)
         self.assertEqual(self.calc.add(-1, 1), 0)
@@ -29,7 +29,10 @@ class SimpleCalculatorTest(unittest.TestCase):
         self.assertEqual(self.calc.divide(0, 1), 0)
         self.assertIsNone(self.calc.divide(1, 0))
         self.assertIsNone(self.calc.divide(0, 0))
-    pass
+
+
+if __name__ == "__main__":
+    unittest.main()
 
 
 if __name__ == "__main__":
