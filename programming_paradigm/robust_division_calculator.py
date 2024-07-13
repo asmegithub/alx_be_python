@@ -13,5 +13,3 @@ def safe_divide(numerator, denominator):
         return f"The result of the division is {numerator/denominator}"
     except:
         raise ZeroDivisionError
-    finally:
-        pass
