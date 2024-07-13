@@ -8,7 +8,7 @@ def safe_divide(numerator, denominator):
         numerator = float(numerator)
         denominator = float(denominator)
     except ValueError:
-        raise ValueError("Error: Please enter numeric values only.")
+        raise ValueError("Error: Please enter numeric values only.") from None
     try:
         return f"The result of the division is {numerator/denominator}"
     except:
