@@ -1,44 +1,19 @@
-import unittest
+from oop.book_class import Book
 
 
-class ZeroDivisionError(Exception):
+def main():
+    # Creating an instance of Book
+    my_book = Book("1984", "George Orwell", 1949)
 
-    def __str__(self):
-        return "Division by zero is invalid!! "
+    # Demonstrating the __str__ method
+    print(my_book)  # Expected to use __str__
 
+    # Demonstrating the __repr__ method
+    print(repr(my_book))  # Expected to use __repr__
 
-def devision(x, y):
-    return x/y
-
-
-def square(x):
-    return x**2
-
-
-class TestSqure(unittest.TestCase):
-    def test_square(self):
-        self.assertEqual(square(2), 4)
-        self.assertEqual(square(5), 25)
-        self.assertEqual(square(0), 0)
-        self.assertEqual(square(-1), 1)
-        self.assertEqual(square(-2), 4)
+    # Deleting a book instance to trigger __del__
+    del my_book
 
 
-class LearnTest(unittest.TestCase):
-    def setUp(self) -> None:
-        print("Start test")
-        pass
-
-    def test_fun_1(self):
-        self.assertEqual(devision(10, 5), 2)
-        self.assertEqual(devision(0, 5), 0)
-
-    def test_fun_2(self):
-        pass
-
-    def test_fun_3_test(self):
-        pass
-
-
-if __name__ == '__main__':
-    unittest.main()
+if __name__ == "__main__":
+    main()
